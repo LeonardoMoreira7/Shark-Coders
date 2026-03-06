@@ -3,8 +3,13 @@ import random
 opcoes = ["pedra", "papel", "tesoura"]
 
 def determinar_vencedor(jogador, computador):
-    if 
-
+    if jogador_escolha == resultado:
+        return "Empate!"
+    elif (jogador_escolha == "pedra" and resultado == "tesoura") \
+                or (jogador_escolha == "papel" and resultado == "pedra" or jogador_escolha == "tesoura" and resultado == "papel"):
+        return "Vitória!"
+    else:
+        return "Derrota!"
 while True:
     jogador_escolha = input("Escolhe pedra, papel ou tesoura (ou 'sair' para terminar): ").lower()
 
