@@ -18,19 +18,20 @@ while True:
         elif opc == 2:
             banca = randint(15,21)
             print(f"A banca somou {banca} pontos")
-        if cartas > banca:
-            print()
-            ganhos = montante * 2
-            saldo += ganhos
-            print("Ganhaste!")
-            print(f"O saldo atual é {saldo} euros")
-        elif cartas < banca:
-            print()
-            saldo = saldo - montante
-            print("Perdeste!")
-            print(f"O saldo atual é {saldo} euros")
-            break
-        else:
-            print()
-            print("Foi um empate!")
-            break
+            if cartas > banca:
+                print()
+                ganhos = montante * 2
+                saldo += ganhos
+                print("Ganhaste!\n")
+                print(f"O saldo atual é {saldo} euros")
+                break
+            elif cartas < banca:
+                print()
+                saldo = saldo - montante
+                print("Perdeste!\n")
+                print(f"O saldo atual é {saldo} euros")
+                break
+            else:
+                print()
+                print("Foi um empate!\n")
+                break
