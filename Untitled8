@@ -1,0 +1,30 @@
+import folium
+
+# Coordenadas de Portugal (centro aproximado)
+
+latitude = 39.3999
+longitude = -8.2245
+
+# Criando o mapa acentrado em Portugal
+
+mapa_portugal = folium.Map(location=[latitude, longitude], zoom_start=6)
+
+# Adicionar um marcador para Lisboa
+
+folium.Marker(
+    location=[38.7167, -9.139],
+    popup="Lisboa",
+    icon=folium.Icon(icon="cloud")
+).add_to(mapa_portugal)
+
+# Adicionar um marcador para Porto
+
+folium.Marker(
+    location=[41.1579, -8.6291],
+    popup="Porto",
+    icon=folium.Icon(icon="green")
+).add_to(mapa_portugal)
+
+mapa_portugal.save("mapa_portugal.html")
+
+mapa_portugal
